@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
+  Name : string;
+  Client : string[];
+
   constructor() { }
 
   ngOnInit(): void {
+    this.Name="Dinesh Y";
+    this.Client=["one ", "two","three","four"];
   }
 
 }
