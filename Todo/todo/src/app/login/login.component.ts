@@ -21,7 +21,7 @@ handleLogic(){
  // console.log(this.username);
  if(this.username==="dinesh" && this.password=== "enter"){
    this.isValid=false; 
-  this.router.navigate(['welcome']);
+  this.router.navigate(['welcome',this.username]);
    console.log(this.isValid);
  }else{
    this.isValid=true;
