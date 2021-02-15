@@ -1,3 +1,6 @@
+
+<button (click) ="toggleShow()">Click here to Show ToDo List</button>
+<div *ngIf="!isExpanded">
 <table border="1">
     <caption>My Todo-List</caption>
     <thead>
@@ -22,3 +25,6 @@
         
     </tbody>
 </table>
+</div>
+
+
