@@ -1,5 +1,12 @@
 <p>welcome {{name}}</p>
 
+<div *ngIf="isBg">
+<button id="chgBg"  (click) = "toogleBg()">Change Bg</button>
+
+
+<app-list-todos *ngFor="let tod of todoos" [todoos] = "todoos">
+</app-list-todos>
+</div>
 <div>
-    You can check your todos <a routerLink = '/todos'>here</a>
+    You can check your todos <a routerLink = '/todos'> here</a>
 </div>

@@ -7,8 +7,21 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./welcome.component.scss']
 })
 export class WelcomeComponent implements OnInit {
-
-  name=''
+  todoos = [
+    {
+      id :1,
+      title: "dinesh"
+    },
+    {
+      id:2,
+      title: "rams",
+    },
+    {
+      id:3,
+      title : "ashu"
+    }
+  ]
+  name='';
   constructor(private route:ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -16,5 +29,10 @@ export class WelcomeComponent implements OnInit {
     this.name = this.route.snapshot.params['name'];
     console.log(this.name);
   }
+isBg : boolean = true;
+
+toggleBg(){
+  this.isBg = !this.isBg;
+}
 
 }

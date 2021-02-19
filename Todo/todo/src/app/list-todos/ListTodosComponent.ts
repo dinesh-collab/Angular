@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Todos } from './list-todos.component';
-
 
 @Component({
   selector: 'app-list-todos',
@@ -8,6 +7,7 @@ import { Todos } from './list-todos.component';
   styleUrls: ['./list-todos.component.scss']
 })
 export class ListTodosComponent implements OnInit {
+  @Input() todoos : any;
   todos = [
     new Todos(1, 'Dance class', new Date()),
     new Todos(2, 'Guitar class', new Date())
