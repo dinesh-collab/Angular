@@ -1,1 +1,6 @@
-<p>transactions works!</p>
+<h1>Transactions</h1>
+<ul>
+  <li *ngFor="let transaction of transactions">
+    {{ transaction.date }} - {{ transaction.description }} - {{ transaction.amount }}
+  </li>
+</ul>

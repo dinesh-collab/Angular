@@ -1,1 +1,6 @@
-<p>transfer works!</p>
+<h1>Transfer Funds</h1>
+<form (ngSubmit)="transfer()">
+  <input type="text" placeholder="Recipient Account Number" [(ngModel)]="recipient" name="recipient" required>
+  <input type="number" placeholder="Amount" [(ngModel)]="amount" name="amount" required>
+  <button type="submit">Transfer</button>
+</form>
