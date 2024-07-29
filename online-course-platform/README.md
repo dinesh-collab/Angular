@@ -1,27 +1,28 @@
-# OnlineCoursePlatform
+# Online Course Platform
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
+## Overview
+The Online Course Platform is a comprehensive application designed to manage and deliver online courses. It includes features such as course creation, student enrollment, and progress tracking.
 
-## Development server
+## Features
+- **Course Creation**: Admin interface for creating and managing courses with modules and lessons.
+- **Student Enrollment**: User registration, authentication, and course enrollment with payment integration.
+- **Progress Tracking**: Track student progress within courses, including completed and pending lessons, quizzes, and assignments.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Technology Stack
+### Frontend
+- Angular
+- Angular Material
+- NgRx (for state management)
+- Angular CLI
 
-## Code scaffolding
+### Backend
+- Node.js
+- Express.js
+- MongoDB (or PostgreSQL)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Setup Instructions
 
-## Build
+### Prerequisites
+- Node.js and npm installed
+- Angular CLI installed
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
