@@ -7,18 +7,16 @@ import { AccountDetailsComponent } from './account-details/account-details.compo
 import { TransactionsComponent } from './transactions/transactions.component';
 import { TransferComponent } from './transfer/transfer.component';
 import { ProfileComponent } from './profile/profile.component';
-import { AuthGuard } from '../auth.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
-  { path: 'account-details', component: AccountDetailsComponent, canActivate: [AuthGuard] },
-  { path: 'transactions', component: TransactionsComponent, canActivate: [AuthGuard] },
-  { path: 'transfer', component: TransferComponent, canActivate: [AuthGuard] },
-  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'account-details', component: AccountDetailsComponent },
+  { path: 'transactions', component: TransactionsComponent },
+  { path: 'transfer', component: TransferComponent },
+  { path: 'profile', component: ProfileComponent },
 ];
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
