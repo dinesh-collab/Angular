@@ -10,7 +10,7 @@ import { TaskListComponent } from './components/task-list/task-list.component';
 import { TaskDetailComponent } from './components/task-detail/task-detail.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-
+import { JwtInterceptor } from '../app/helpers/jwt.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +26,9 @@ import { RegisterComponent } from './components/register/register.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true } // Register the interceptor
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
