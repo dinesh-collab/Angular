@@ -1,5 +1,12 @@
 <div class="chart-container">
     <div style="display: block;">
+      <select (change)="changeChartType($event.target.value)">
+        <option value="bar">Bar</option>
+        <option value="line">Line</option>
+        <option value="pie">Pie</option>
+      </select>
+    </div>
+    <div style="display: block;">
       <canvas baseChart
               [datasets]="chartData"
               [labels]="chartLabels"
