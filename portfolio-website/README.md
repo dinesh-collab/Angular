@@ -1,27 +1,23 @@
-# PortfolioWebsite
+# Data Visualization App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
+This Angular application visualizes complex data using the Chart.js library through the `ng2-charts` wrapper. The app features various types of charts, such as bar charts, and allows for dynamic data visualization.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Multiple chart types (bar, line, pie, etc.)
+- Responsive design
+- Dynamic data updates
 
-## Code scaffolding
+## Getting Started
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Prerequisites
 
-## Build
+- Node.js and npm installed
+- Angular CLI installed
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Installation
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/data-visualization-app.git
+   cd data-visualization-app
