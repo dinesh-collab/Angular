@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Appointment } from '../models/appointment';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { DataService } from '../data.service';
 @Component({
   selector: 'app-appointment-list',
@@ -17,22 +17,7 @@ appdate : Date = new Date()
 arr = [];
 appname :string = ''
 
-add(){
-   this.appointment.push(
-    { 
-      id: this.appointment.length + 1,
-      name: this.appname,
-      date: this.appdate
-    }
-   )
-}
-obj1 = [{
-  name : "husain"
-}]
-obj2 = [{
-  name : 'hati paraad'
-}]
- a = 8;
+ref:string = ''
 
 myForm: FormGroup;
 
@@ -41,18 +26,21 @@ myForm: FormGroup;
 
     this.myForm = this.fb.group({
       name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]]
+      email: ['', [Validators.required, Validators.email]],
+      date : new FormControl('')
     });
   }
 
   onSubmit() {
-this.obj1 = this.obj2;
-this.obj2 = [{
-  name: 'indian'
-}]
-    if (this.myForm.valid) {
-      console.log('Form submitted:', this.obj1 );
-      
-    }
-  }
+    this.appointment.push({
+      name: this.myForm.value.name,
+      id: this.appointment.length + 1,
+      date: this.myForm.value.date
+    })
+    console.log(this.appointment)
+}
+
+del(value: any){
+  alert(value)
+}
 }
