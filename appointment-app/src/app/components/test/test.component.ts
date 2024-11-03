@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { DataService } from '../data.service';
 
@@ -10,21 +11,26 @@ import { DataService } from '../data.service';
 })
 export class TestComponent {
 // @Input() testdata : 
+items = [] as any[];
+myform : FormGroup;
+constructor(private data : DataService,private http: HttpClient,private fb:FormBuilder){
+if(localStorage.getItem('appointment')){
+  this.items = JSON.parse(localStorage.getItem('appointment') || '') ;
+}
+  this.myform = this.fb.group({
+    name: ['',Validators.required],
+    email : ['',[Validators.required,Validators.email]]
+  })
+}
 
-constructor(private data : DataService,private http: HttpClient){
+onSubmit(){
+  this.items.push(this.myform.value)
+  localStorage.setItem('appointment',JSON.stringify(this.items))
+}
+remove(val: any){
+this.items.splice(val,1);
+localStorage.setItem('appointment',JSON.stringify(this.items))
 
 }
-arr = []
 
-ngOnInit(){
-  this.data.commondata = "Tesa"
-this.getData().subscribe(response =>{
-  console.log(response)
-})
-}
-
-getData() {
-  // Return an Observable that makes the API call
-  return this.http.get('https://jsonplaceholder.typicode.com/todos');
-}
 }

@@ -1,1 +1,44 @@
-<p>test works!</p>
+<div class="container">
+    
+    <div class="row">
+        <div class="col">
+            <form [formGroup]="myform" (ngSubmit)="onSubmit()">
+
+                <label>Enter name</label> 
+                <input placeholder="Enter Text" type="text" formControlName="name">
+                
+                
+            </form>
+        </div>
+        <div class="col">
+            <label>Enter email</label>
+            <input type="email" placeholder="Enter email" formControlName="email">
+            
+        </div>
+        <div class="col">
+            <button type="button" class="btn btn-danger"  >Add Item</button>
+          
+        </div>
+        </div>
+
+<form [formGroup]="myform" (ngSubmit)="onSubmit()">
+
+    <label>Enter name</label> 
+    <input placeholder="Enter Text" type="text" formControlName="name">
+    <label>Enter email</label>
+    <input type="email" placeholder="Enter email" formControlName="email">
+
+    <button  >Add Item</button>
+
+</form>
+
+<ul class="ulli" *ngFor="let item of items;let i =index">
+    <div class="card">
+
+        <li>
+            {{i + 1}} : {{item.name}}
+            <button type="button" class="btn btn-danger" (click)="remove(i)">Delete</button>
+        </li>
+    </div>
+</ul>
+</div>
