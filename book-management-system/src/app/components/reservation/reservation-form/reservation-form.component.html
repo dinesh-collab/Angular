@@ -1,1 +1,18 @@
-<p>reservation-form works!</p>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()" >
+<label name="guestname">Guest Name</label>
+<input type="text" name="guestname" formControlName="guestname" placeholder="guest name"><br><br>
+<label name="guestemail">Guest Email</label>
+<input type="email" name="guestemail" formControlName="guestemail" placeholder="guest name"><br><br>
+<label name="checkindate">check in date</label>
+<input type="date" name ="checkindate" formControlName="checkindate" placeholder="guest name"><br><br>
+<div *ngIf="myForm.get('checkindate')?.invalid && myForm.get('checkindate')?.touched" >
+Enter valid details
+</div>
+<label name="checkoutdate">check out date</label>
+<input type="date" name="checkoutdate" formControlName="checkoutdate" placeholder="guest name"><br><br>
+
+<button type="submit" [disabled]="myForm.invalid" > 
+Add to list
+</button>
+</form>
+
