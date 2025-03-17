@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>React Projects</title>
+    <title>Angular Projects</title>
     <link rel="stylesheet" href="style.css">
     <style>
         body {
@@ -61,23 +61,26 @@ h1 {
 </head>
 <body>
     <div class="container">
-        <h1>React Projects</h1>
+        <h1>Angular Projects</h1>
         <div class="projects-grid">
             <script>
                 const projects = [
-                    { name: "COVID-19 Tracker", path: "covid-19_tracker", icon: "fa-virus" },
-                    { name: "E-commerce Shopping Cart", path: "ecommerse-shopping-cart", icon: "fa-shopping-cart" },
-                    { name: "Face Detection", path: "facedetection", icon: "fa-smile" },
-                    { name: "Friends App", path: "friends-react", icon: "fa-user-friends" },
-                    { name: "Healthcare App", path: "healthcare-app", icon: "fa-heartbeat" },
-                    { name: "Status Bar Config", path: "status-bar-config-based-on-route", icon: "fa-route" },
-                    { name: "Task Management App", path: "task-management-app", icon: "fa-tasks" },
-                    { name: "Task Manager", path: "task-manager", icon: "fa-list-check" }
+                    { name: "Banking App", path: "Banking-App/banking-app", icon: "fa-university" },
+                    { name: "Task Manager", path: "TaskManager", icon: "fa-tasks" },
+                    { name: "Todo", path: "Todo/todo", icon: "fa-list-check" },
+                    { name: "Appointment App", path: "appointment-app", icon: "fa-calendar-alt" },
+                    { name: "Book Management System", path: "book-management-system", icon: "fa-book" },
+                    { name: "Buy and Sell", path: "buy-and-sell", icon: "fa-shopping-bag" },
+                    { name: "Data Visualization App", path: "data-visualization-app", icon: "fa-chart-bar" },
+                    { name: "Online Course Platform", path: "online-course-platform", icon: "fa-graduation-cap" },
+                    { name: "Portfolio Website", path: "portfolio-website", icon: "fa-laptop-code" },
+                    { name: "Project Management Tool", path: "project-management-tool", icon: "fa-project-diagram" },
+                    { name: "Shopping Cart Ecommerce", path: "shopping-cart-Ecommerce", icon: "fa-cart-shopping" }
                 ];
 
                 document.write(
                     projects.map(proj => `
-                        <a href="https://dinesh-collab.github.io/React/${proj.path}/" class="project-card">
+                        <a href="https://github.com/dinesh-collab/Angular/tree/master/${proj.path}/" class="project-card">
                             <i class="fa ${proj.icon}"></i>
                             <span>${proj.name}</span>
                         </a>
